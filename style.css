@@ -1,0 +1,253 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+/* General Reset */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+  border-radius: 1.2rem;
+}
+
+/* Reusable css  */
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 80px;
+}
+
+/* General Style Start*/
+.container {
+  width: 96.8rem;
+  margin: 0 auto;
+}
+
+body {
+  border-bottom: 0.4rem solid #087f5b;
+  color: #343a40;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header Start */
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 6.4rem;
+  column-gap: 8rem;
+}
+
+header,
+section {
+  margin-bottom: 9.6rem;
+}
+
+h1 {
+  font-size: 4.4rem;
+  line-height: 1.1;
+  margin-bottom: 3.2rem;
+  letter-spacing: -1px;
+}
+
+.header__item {
+  align-self: center;
+}
+.header__description {
+  margin-bottom: 2.4rem;
+  line-height: 1.7;
+  font-size: 1.8rem;
+}
+
+.btn--big {
+  font-size: 1.8rem;
+  padding: 1.6rem 3.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  color: #fff;
+  background-color: #087f5b;
+  border-radius: 10rem;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #099268;
+}
+
+/* Section chairs special */
+h2 {
+  margin-bottom: 4.8rem;
+  font-size: 3.6rem;
+  letter-spacing: -0.5px;
+}
+
+.features-title {
+  margin-bottom: 1.6rem;
+  font-size: 2rem;
+}
+.features-description {
+  line-height: 1.7;
+  font-size: 1.8rem;
+}
+.features-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  stroke: #087f5b;
+  margin-bottom: 2.4rem;
+}
+
+.testimonial-box {
+  grid-column: 2/-1;
+  align-self: center;
+}
+
+.testimonial-section {
+  background-color: #087f5b;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  color: #fff;
+}
+
+.testimonial-box h2 {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+}
+
+.testimonial-description {
+  line-height: 1.7;
+  font-style: italic;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+  color: #e6fcf5;
+}
+.testimonial-author {
+  color: #c3fae8;
+}
+
+/* Section card chairs */
+.chair {
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.07);
+  border-radius: 1.2rem;
+}
+
+.chair img {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.chair-box {
+  padding: 3.2rem;
+}
+h3 {
+  margin-bottom: 2.4rem;
+  font-size: 2rem;
+}
+.chair-details {
+  list-style-type: none;
+  margin-bottom: 4.8rem;
+}
+
+.chair-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  stroke: #087f5b;
+}
+
+.chair-details li {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.chair-price {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.btn--small {
+  font-size: 1.4rem;
+  padding: 0.8rem 1.2rem;
+}
+
+/* footer  */
+footer {
+  margin-bottom: 4.8rem;
+  font-size: 1.4rem;
+  color: rgb(73, 80, 87);
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1.6rem;
+  }
+  header {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  header h1 {
+    margin: 1.8rem 0;
+    font-size: 3.2rem;
+  }
+  header .header__description {
+    font-size: 1.6rem;
+  }
+  .grid-3-cols {
+    display: flex;
+    flex-direction: column;
+  }
+  .chairs-special {
+    max-width: 100%;
+    padding: 3.2rem;
+    box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.07);
+    border-radius: 1.2rem;
+  }
+  .features-icon {
+    margin: 1.6rem 0;
+  }
+  .testimonial-box h2 {
+    margin-top: 1.6rem;
+  }
+  .testimonial-box .testimonial-author {
+    font-size: 1.6rem;
+  }
+  .chair {
+    margin-bottom: 3.2rem;
+  }
+  footer {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  footer span {
+    color: #087f5b;
+    font-weight: bold;
+  }
+
+  .btn:link, .btn:visited{
+    border-radius: 0.8rem;
+  }
+  .btn--small{
+    padding: 1.8rem;
+  }
+}
